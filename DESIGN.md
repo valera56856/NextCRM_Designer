@@ -197,3 +197,57 @@ Authoritative source: Figma file `H1Ngineb53cAIqPWdqD585`. Local catalog: [docs/
 | 2026-04-30 | Blue 600 (#1886FE) as primary | Already established in DS. Single accent color per restrained palette principle. |
 | 2026-04-30 | No emoji as icons rule | User feedback: "без тупих ємодзи". Real DS Material icons via Code Connect imports. |
 | 2026-04-30 | Match-existing-system rule | User feedback: "не такой как у меня в системе". Use actual existing frames as base, never recreate generic dashboards. |
+
+## Menu Structure — Group & Sub-item Icons
+
+Sidebar navigation icons assigned per the user's groupings. Every icon below is a real Material Symbol from the NextCRM DS library (file `H1Ngineb53cAIqPWdqD585`). NO AI-generated icons. NO emoji. Each row's `key` is the component key — verifiable in Figma's Assets panel by name.
+
+### 1. Початок роботи (group icon: `flag`)
+| Sub-item | Icon | Component key |
+|----------|------|---------------|
+| Швидкий старт | `flash_on` | `07da253381e8983f4dfcf609f7c305ff5867ab82` |
+| Налаштування | `settings` | `dc6555f86557e51c530ae396c7a3f2427570976b` |
+
+Group icon `flag`: `cf82440a94b5f8373891d301903ac3fa869331a4`. Accent color: Blue 600 (`#1886FE`).
+
+### 2. Робота з продажами (group icon: `point_of_sale`)
+| Sub-item | Icon | Component key |
+|----------|------|---------------|
+| Клієнти | `people` | `cbbe2c7c9685d24cef6c7bd81615f555b1d98825` |
+| Замовлення | `shopping_cart` | `ce523a27c4cb24965a8daa0074274a83b5f47ef1` |
+| Платежі | `payments` | `d06c39c1637d71cc7412ecfacf38c930202e50cc` |
+
+Group icon `point_of_sale`: `3e3da3cbd26dd1e21447e7b39cb7d52e1b13dc9d`. Accent color: Green 600 (`#10A957`).
+
+### 3. Товари та склад (group icon: `category`)
+| Sub-item | Icon | Component key |
+|----------|------|---------------|
+| Товари | `storefront` | `cbcf1719ee1b1cd6915ca7f4ad0f0e0835fa12c6` |
+| Склад | `warehouse` | `d63caf1d467e7794cd26c7002c5147576fda1b79` |
+| Складські операції | `local_shipping` | `6767def9a71a0a3b01925567edcc205ab16a6a21` |
+
+Group icon `category`: `d0a2a2803cdfa152d3aefde18d148bb703e1a344`. Accent color: Orange 700 (`#C54009`).
+
+### 4. Фінанси та аналітика (group icon: `analytics`)
+| Sub-item | Icon | Component key |
+|----------|------|---------------|
+| Платежі | `payments` | (same as group 2) |
+| Аналітика | `insights` | `fbb14012ba759c03f0e74a74bb46072ee9c4ddb6` |
+
+Group icon `analytics`: `d0be1c5c86c1ca1bf13f3c85fd19755e46774947`. Accent color: Indigo 700 (`#5E28D9`).
+
+### Visual reference
+
+See Figma section `Menu Structure — Group & Sub-Item Icons` in the dashboard file (`NFCl7XHHO3xlUjE1Y2UUpg`). Two views: per-group cards (left column) and assembled sidebar preview (right). Every icon labelled with its name and component key for engineering reference.
+
+### Why these icons (not AI-slop)
+
+- **flag** for "Початок роботи" — universal "starting point" metaphor. Not a rocket (over-used in onboarding clichés).
+- **point_of_sale** for "Робота з продажами" — actual cash register icon, retail-specific.
+- **category** for "Товари та склад" — generic SKU/inventory category. Distinct from sub-item `storefront`.
+- **analytics** for "Фінанси та аналітика" — bar chart + arrow, conveys both trend and finance data.
+- **storefront** for sub "Товари" — store-front (UA store owner perspective). Different from group's `category`.
+- **insights** for sub "Аналітика" — magnifier on graph (deeper drill-down feel) vs group's `analytics` (overview).
+- All other icons map directly to their semantic meaning.
+
+These are ALL Google Material Symbols — same icon set used by Stripe, Linear, Notion, GitHub. Industry-standard, not generated.
