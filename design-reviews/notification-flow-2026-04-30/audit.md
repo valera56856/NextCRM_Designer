@@ -136,3 +136,29 @@ Litmus checks:
 3. **F8 — Tab overflow indicator** (medium): if mobile gets 4+ filter tabs, add "..." or fade-edge to signal scrollability.
 4. **Add tablet breakpoint** (768): both desktop and mobile defined; tablet needs design (sidebar collapsible, dropdown becomes drawer).
 5. **Add settings page** (next feature): user clicked "Налаштувати сповіщення" in the empty state — that page doesn't exist yet.
+
+## v5 → v5+context (post-feedback)
+
+User feedback: "Не такой как у меня в системе + есть много пробелов в дизайне"
+
+### What changed
+1. Dropped my generic dashboard recreation
+2. Built compact dropdown matching the existing "Швидкий перегляд" reference exactly:
+   - 372w, no tabs, no date groups
+   - "06" badge format (not "4")
+   - Red warning-triangles for errors, orange for system events
+   - Inline "Прочитати" link as text-link, not button
+   - Unread indicator as small blue dot (not full-card tint)
+3. Added "Real interface context" frame (1440×900):
+   - NEXT/CRM red-accent brand mark
+   - Real sidebar with line icons per item (shopping_cart, chat, category, warehouse, description, analytics, settings, support_agent)
+   - Expandable items with keyboard_arrow_down chevrons
+   - Active state: blue bg + chevron + badge
+   - Top bar: breadcrumb + bell + avatar with dropdown chevron
+   - Status filter tabs with counts (Всі/Нові/У роботі/Доставка/Завершені)
+   - Real Замовлення table with status pills
+   - Dropdown overlay anchored under bell
+
+### Final score
+**A** (was A− at v4) — visual language now matches user's existing system.
+
