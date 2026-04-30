@@ -77,3 +77,17 @@ If a token is ever exposed (chat, gist, screenshot), revoke it immediately at ht
 ## Code mirror
 
 The React/CSS implementation lives in a separate repo. CSS tokens at `src/components/ui/tokens.css` are derived from this Figma file (header comment: `Design Tokens (from Figma)`).
+
+---
+
+## Dashboard mirror
+
+A second Figma file, `NextCRM - Dashboard` (key `NFCl7XHHO3xlUjE1Y2UUpg`), holds the actual product screens (24 pages: Orders, Products, Customers, Warehouse, Chats, Notifications, Analytics, etc.). It consumes components from the Design System library above.
+
+```
+dashboard/
+├── docs/
+│   ├── _index.md       Master index of 24 product pages
+│   └── pages/          Per-page frame structure + node IDs
+└── raw/                JSON dumps from Figma REST API
+```
