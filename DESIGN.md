@@ -251,3 +251,31 @@ See Figma section `Menu Structure — Group & Sub-Item Icons` in the dashboard f
 - All other icons map directly to their semantic meaning.
 
 These are ALL Google Material Symbols — same icon set used by Stripe, Linear, Notion, GitHub. Industry-standard, not generated.
+
+## Icon Picker Reference
+
+Separate Figma frame `Icon Alternatives — pick best per menu slot` (`10900:5324`) shows 3 candidate icons per menu slot for visual comparison. Use this when deciding whether to swap any current pick.
+
+### Decision rules
+- **Group icons** should feel "category-level" — bolder, more abstract (e.g. `flag`, `point_of_sale`, `category`, `analytics`)
+- **Sub-item icons** should be precise to the action (`shopping_cart` for orders, not `category`)
+- **Avoid duplicating** group icon as a sub-item under it (e.g. don't use `analytics` for both group "Фінанси та аналітика" AND sub "Аналітика" — use `insights` for the sub instead)
+
+### Alternative candidates (39 total)
+For each slot, 3 verified Material Symbols are presented in the picker frame. To swap any current pick, reference the candidate by name — the component key is shown on each card for engineering use.
+
+| Slot | Current | Alt 1 | Alt 2 |
+|------|---------|-------|-------|
+| Group: Початок роботи | flag | not_started | outlined_flag |
+| Group: Робота з продажами | point_of_sale | monetization_on | shopping_basket |
+| Group: Товари та склад | category | widgets | storefront |
+| Group: Фінанси та аналітика | analytics | account_balance | pie_chart |
+| Sub: Швидкий старт | flash_on | speed | play_arrow |
+| Sub: Налаштування | settings | tune | build |
+| Sub: Клієнти | people | groups | contacts |
+| Sub: Замовлення | shopping_cart | receipt_long | list_alt |
+| Sub: Платежі | payments | credit_card | account_balance_wallet |
+| Sub: Товари | storefront | local_offer | local_mall |
+| Sub: Склад | warehouse | store | inbox |
+| Sub: Складські операції | local_shipping | swap_horiz | move_to_inbox |
+| Sub: Аналітика | insights | bar_chart | show_chart |
