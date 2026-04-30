@@ -109,3 +109,34 @@ A1 (closed `06`) → A2 (hover) → A3 (open, 6 unread highlighted) → **A3.5 (
 | Прочитати дія | ✅ (на кожному unread) |
 | Auto-read on open, items visible | ✅ (A3.5) |
 | "Переглянути всі" | ✅ |
+
+## Mobile flow added (Row 4)
+
+6 mobile frames (375×812), all spec-compliant:
+
+| # | Frame | Content |
+|---|-------|---------|
+| **M1** | Closed | Mobile dashboard з KPI + last orders + bell `06` у top nav |
+| **M2** | Open list | Full-screen список тільки unread (6 items, EDF9FF bg, "Прочитати" на кожному, sync blue dots) |
+| **M2.5** | Auto-read | Items still visible, normal white bg, no dots, badge зник |
+| **M3** | Detail | Bottom sheet з sev+cat pills, повний опис, related resource, actions ("Повторити платіж" / "Зв'язатися") |
+| **M4** | Empty | "Все під контролем" centered |
+| **M5** | Settings | Quick toggles (DND/Quiet/Email digest) + per-event list з locked critical items |
+
+### Mobile-specific decisions
+- **Bottom sheet** замість drawer для detail (mobile-native pattern)
+- **Top nav** з real DS Logo (78×26 mini) + bell + avatar
+- **Bottom tab bar** 4 items: Замовлення / Чати / Сповіщення / Більше
+- Status bar 9:41 + safe area at bottom (24px padding)
+
+### Cross-device link
+PC A3 → Mobile M2 (purple dashed arrow): "same flow on mobile" — показує що відкриття bell дає dropdown на PC, full screen list на mobile.
+
+### A3.5 sidebar fix
+Replaced simplified 5-item sidebar with full 7-item version matching all other dashboards. Now consistent across all 12 dashboards in the flow.
+
+## Final stats
+- **17 frames** total: 6 PC bell, 4 PC inbox, 1 PC settings, 6 mobile
+- **Cross-flow arrows**: 4 in-row PC + 1 PC→inbox + 1 PC→settings + 5 mobile in-row + 1 cross-device
+- **Real DS components**: Logo, 23 Material icons
+- **Spec compliance**: 11/11 rules met (including auto-read transition state)
