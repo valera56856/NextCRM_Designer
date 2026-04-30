@@ -1,0 +1,24 @@
+# Secrets — NEVER commit Figma tokens
+.env
+.env.*
+*.token
+**/figma-token*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*~
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Node (if added later)
+node_modules/
