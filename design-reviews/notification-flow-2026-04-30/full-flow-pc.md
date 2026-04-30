@@ -51,3 +51,13 @@ Drawers: 560w (orders) / 480w (notification), with shadow, header banner, body s
 - Completeness: 8/10 (toasts not yet shown, websocket-realtime arriving notification not animated)
 - Visual match to existing system: 9/10 (sidebar matches reference, dropdown style matches existing "Швидкий перегляд")
 - Logical connectivity: 10/10 (all transitions explicit with cross-flow arrows)
+
+## Sidebar fix (post-feedback)
+
+User: "Меню получилось кривое"
+
+**Issue:** sidebar menu items had auto-height (HUG) → uneven heights between items, ~80px gaps instead of tight 40px rows. DS icon import inflated some items.
+
+**Fix:** All 10 dashboard sidebars in the section — set `layoutSizingVertical = 'FIXED'`, height = 40px per row. Set menu `itemSpacing = 0` (rows have own padding via height). 70 rows fixed in one pass.
+
+**Result:** Tight, regular rhythm matching the existing "Швидкий перегляд" reference.
