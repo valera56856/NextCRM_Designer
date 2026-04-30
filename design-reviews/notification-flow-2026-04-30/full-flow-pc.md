@@ -61,3 +61,23 @@ User: "Меню получилось кривое"
 **Fix:** All 10 dashboard sidebars in the section — set `layoutSizingVertical = 'FIXED'`, height = 40px per row. Set menu `itemSpacing = 0` (rows have own padding via height). 70 rows fixed in one pass.
 
 **Result:** Tight, regular rhythm matching the existing "Швидкий перегляд" reference.
+
+## /design-review pass — round 2
+
+User feedback: "+ лого унас не такое как нужно. Исправь как у нас в дизайне"
+
+### Findings (audit checklist)
+
+| # | Issue | Impact | Fix |
+|---|-------|--------|-----|
+| F1 | Cross-flow arrows тонкі (2px) — губляться в overview | HIGH | Потовщено до 3px на всіх 4 cross-flow + всі in-row arrows |
+| F2 | Frame labels — звичайний 12px текст, слабкий visual indicator | MEDIUM | Замінено на кольорові chips (A=blue, B=purple, C=green) + текст label |
+| F-LOGO | Самодільний brand mark (чорний квадрат + N + NEXT/CRM текст) — не відповідає DS | **HIGH** | Імпортовано real DS Logo component (`Property 1=Default`, key `df41f5a13a1fc34dda0cf516ae99d5bb25007afe`). Заміна 10 з 10 sidebars. |
+
+### Score
+- **Design Score**: A → A+
+- **Visual match to existing system**: 9 → **10** (логотип identical to DS)
+- **AI Slop Score**: A (unchanged)
+
+### Boil-the-lake check
+Усі 10 sidebars оновлено в одному pass — не залишилося frames з фейковим брендом. Cross-flow + frame labels — теж complete coverage.
